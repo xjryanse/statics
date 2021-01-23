@@ -21,6 +21,8 @@ class StaticsService extends Base implements MainModelInterface {
     public function getSql(){
         //取字段
         
+        
+        
     }
     
     /**

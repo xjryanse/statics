@@ -1,0 +1,20 @@
+{
+    "name": "xjryanse/statics",
+    "description": "可复用的数据统计sql模块",
+    "type": "library",
+    "authors": [
+        {
+            "name": "xjryanse",
+            "email": "xjryanse@sina.com"
+        }
+    ],
+    "require": {
+
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+          "xjryanse\\statics\\": "src/"
+        }
+    }
+}

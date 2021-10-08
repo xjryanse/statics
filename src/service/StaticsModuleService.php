@@ -1,6 +1,6 @@
 <?php
 
-namespace app\statics\service;
+namespace xjryanse\statics\service;
 
 use xjryanse\system\interfaces\MainModelInterface;
 
@@ -13,7 +13,7 @@ class StaticsModuleService extends Base implements MainModelInterface {
     use \xjryanse\traits\MainModelTrait;
 
     protected static $mainModel;
-    protected static $mainModelClass = '\\app\\statics\\model\\StaticsModule';
+    protected static $mainModelClass = '\\xjryanse\\statics\\model\\StaticsModule';
 
     /**
      *

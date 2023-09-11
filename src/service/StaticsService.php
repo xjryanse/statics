@@ -3,7 +3,7 @@
 namespace xjryanse\statics\service;
 
 use xjryanse\system\interfaces\MainModelInterface;
-
+use think\Db;
 /**
  * 
  */
@@ -11,6 +11,7 @@ class StaticsService extends Base implements MainModelInterface {
 
     use \xjryanse\traits\InstTrait;
     use \xjryanse\traits\MainModelTrait;
+    use \xjryanse\traits\MainModelQueryTrait;
     use \xjryanse\traits\StaticModelTrait;
 
     protected static $mainModel;
@@ -64,6 +65,25 @@ class StaticsService extends Base implements MainModelInterface {
      */
     public static function keyId($key){
         return self::mainModel()->where('static_key',$key)->value('id');
+    }
+    /**
+     * 20230509：后台配置完成，可调用此方法进行测试
+     * 
+     */
+    public static function staticsTest($id, $param = []){
+        //$key = "webOrderStatics";
+        // $id     = StaticsService::keyId($key);
+        $inst   = self::getInstance($id);
+        $inst->setStartTime(date('Y-m-d 00:00:00'));
+        $inst->setEndTime(date('Y-m-d 23:59:59'));
+        // 今天
+        $sql1   = $inst->getSql();
+        $data   = Db::query($sql1);
+        // 测试
+        $res['sql']     = $sql1;
+        $res['data']    = $data;
+
+        return $res;
     }
 
     /**

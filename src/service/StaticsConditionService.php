@@ -11,6 +11,7 @@ class StaticsConditionService extends Base implements MainModelInterface {
 
     use \xjryanse\traits\InstTrait;
     use \xjryanse\traits\MainModelTrait;
+    use \xjryanse\traits\MainModelQueryTrait;
     use \xjryanse\traits\StaticModelTrait;
     
     protected static $mainModel;
